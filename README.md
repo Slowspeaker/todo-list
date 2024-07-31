@@ -7,7 +7,7 @@ The project was created for educational purposes and is an HTTP proxy server wri
 ## How to install
 1. Clone the repository:
    ```sh
-   git clone https://github.com/Bekyrys/todo-list
+   git clone https://github.com/Slowspeaker/todo-list
     ```
   ```sh
      cd todo-list
@@ -24,7 +24,6 @@ make run
 ```
 ## Deployed on RENDER:
 ### Base URL
-https://halyk-proxy-server-easy.onrender.com
 
 
 
@@ -32,12 +31,12 @@ https://halyk-proxy-server-easy.onrender.com
 POST /api/todo-list/tasks
 ```sh
 {
-  "title": "Buy milk"
+  "title": "Buy car"
 }
 ```
 ### Response example:
 ```sh
-{"id":"0ffcf33a-331e-4f67-be12-cc199490cef1","title":"Buy milk","activeAt":"19 July 17:04","completed":false}
+{"id":"7bca2efd-b153-4fd1-9ba1-54ebe4a6cb65","title":"Buy car","activeAt":"31 July 17:27","completed":false}
 ```
 **Edit existing tasks:**
 
@@ -50,7 +49,7 @@ PUT /api/todo-list/tasks
 ```
 ### Response example:
 ```sh
-{"id":"0ffcf33a-331e-4f67-be12-cc199490cef1","title":"Buy 2 milk","activeAt":"20 July 13:30","completed":false}
+{"id":"7bca2efd-b153-4fd1-9ba1-54ebe4a6cb65","title":"Buy 2 car","activeAt":"20 July 13:30","completed":true}
 ```
 **Marks task as done:**
 
@@ -60,7 +59,7 @@ _/api/todo-list/tasks/{ID}/done_
 
 ### Response example:
 ```sh
-{"id":"0ffcf33a-331e-4f67-be12-cc199490cef1","title":"Buy 2 milk","activeAt":"20 July 13:30","completed":true}
+{"id":"7bca2efd-b153-4fd1-9ba1-54ebe4a6cb65","title":"Buy 2 car","activeAt":"20 July 13:30","completed":true}
 ```
 
 
@@ -79,6 +78,5 @@ GET /api/todo-list/tasks?status=active
 GET /api/todo-list/tasks?status=done
 ### Response example:
 ```sh
-[{"id":"0ffcf33a-331e-4f67-be12-cc199490cef1","title":"Buy 2 milk","activeAt":"0000-07-20T13:30:00Z","done":true}]
 
 ```
